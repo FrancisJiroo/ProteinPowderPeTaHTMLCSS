@@ -1,0 +1,155 @@
+@keyframes move{
+    0%{
+        transform: translateX(100%) translateY(-100%) rotate(360deg);
+    }
+    100%{
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+}
+@keyframes colorswitch{
+    0%{
+        color: white;
+    }
+    50%{
+        color: gold;
+    }
+    100%{
+        color: white;
+    }
+}
+html{
+    min-height: 100%;
+}
+body{
+    background-image: url(bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow: auto;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+nav{
+    background-color: black;
+    display: flex;
+    height: 10vh;
+    color: white;
+}
+.navleft{
+    height: inherit;
+    width: 60vw;
+}
+.navright{
+    height: inherit;
+    width: 40vw;
+    place-content: center;
+}
+#logo{
+    height: inherit;
+}
+.navtext, .navchoice{
+    font-family: Oswald;
+    font-size: 3vh;
+    transition: all cubic-bezier(0.47, 0, 0.745, 0.715) .3s;
+    border-bottom: black 1px solid;
+}
+.navchoice:hover{
+    border-bottom: yellow 1px solid;
+}
+.shop{
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+h1{
+    font-family: Oswald;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+p{
+    color: white;
+    font-family: sans-serif;
+    width: 50vw;
+    margin: 0;
+}
+#choice{
+    all: unset;
+    border: 2px white solid;
+    background-color: rgba(125, 125, 125, 0.3);
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px yellow;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) .2s;
+}
+#choice:hover{
+    background-color: rgba(125, 125, 125, 0.1);
+    border: 2px yellow solid;
+    box-shadow: 5px 10px 10px yellow;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+.leftdiv{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    justify-content: flex-end;
+    margin-right: 1vw;
+}
+.rightdiv{
+    width: 50vw;
+    align-content: center;
+}   
+#whey{
+    width: 65%;
+    animation: move 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    ;
+}
+#proteinpowder{
+    font-family: Alan Sans;
+    font-weight: bolder;
+    font-size: 8vw;
+    margin: 0;
+}
+#title{
+    border: 1px solid rgba(0, 0, 0, 0.408);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(105, 105, 105, 0.315);
+    font-size: 3vw;
+    animation: colorswitch 1s cubic-bezier(0.47, 0, 0.745, 0.715);
+    animation-delay: 2s;
+    width: 30vw;
+    height: fit-content;
+    text-align: center;
+}
+#info{
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.408);
+    background-color: rgba(105, 105, 105, 0.315);
+    width: 30vw;
+    text-align: center;
+    padding: 15px;
+    font-size: 110%;
+}
+#proteinpowdertext{
+    margin: auto;
+    text-align: center;
+    font-size: 7vw;
+    font-weight:bolder;
+    background: #6e6e6e;
+    background: linear-gradient(346deg, rgba(110, 110, 110, 1) 0%, rgba(255, 255, 255, 1) 51%, rgba(0, 0, 0, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+#flexemoji{
+    color: initial;
+}
+#flexemojimirror{
+    transform: scaleX(-1);
+}
