@@ -71,6 +71,7 @@ h1{
 p{
     color: white;
     font-family: sans-serif;
+    font-size: 1vw;
     width: 50vw;
     margin: 0;
 }
